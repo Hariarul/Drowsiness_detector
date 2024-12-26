@@ -80,7 +80,7 @@ def process_frame(frame, detection_model, age_model, frame_count):
     cvzone.putTextRect(frame, f'People Sleeping: {math.ceil(sleeping_count/2)}', (50, frame.shape[0] - 20),
                        colorR=(255, 0, 0), colorT=(255, 255, 255), scale=2, thickness=2)
 
-    return frame, mode_state, math.ceil(sleeping_count)
+    return frame, mode_state, sleeping_count
 
 # Main app logic
 if file is not None:
