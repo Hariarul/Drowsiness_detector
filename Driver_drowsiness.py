@@ -28,8 +28,8 @@ st.sidebar.header("Upload Input")
 file = st.sidebar.file_uploader("Upload an Image/Video", type=["jpg", "jpeg", "png", "mp4", "avi", "mov"], accept_multiple_files=False)
 
 # Pre-trained model paths
-detection_model_path = "Drowsiness_detector.pt"  
-age_model_path = "age_detector.pt"  
+detection_model_path = r"D:\Dataset for internships\Drowsiness\Two eye.pt"  
+age_model_path = r"D:\Dataset for internships\Drowsiness\AGE.pt"  
 
 # Load models
 detection_model = YOLO(detection_model_path)
