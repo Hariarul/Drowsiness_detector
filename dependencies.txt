@@ -11,4 +11,3 @@ numpy==1.23.5
 requests==2.32.3
 streamlit==1.40.1
 cvzone==1.6.1
-pandas==2.0.3
