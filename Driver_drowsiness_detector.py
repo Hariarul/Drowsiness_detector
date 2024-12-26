@@ -59,7 +59,7 @@ def process_frame(frame, detection_model, age_model, frame_count):
             conf = math.ceil(box.conf * 100) / 100
             currentClass = classNames[cls]
 
-            if conf > 0.3 and currentClass in ['car', 'sleeping']:
+            if conf > 0.3 and currentClass =='car' and 'sleeping':
                 person_states.append(currentClass)
 
                 if currentClass == 'sleeping':
