@@ -77,7 +77,7 @@ def process_frame(frame, detection_model, age_model, frame_count):
     # Display mode state and sleeping count on frame
     cvzone.putTextRect(frame, f'Mode State: {mode_state}', (50, frame.shape[0] - 60),
                        colorR=(0, 255, 0), colorT=(255, 255, 255), scale=2, thickness=2)
-    cvzone.putTextRect(frame, f'People Sleeping: {math.ceil(sleeping_count)}', (50, frame.shape[0] - 20),
+    cvzone.putTextRect(frame, f'People Sleeping: {math.ceil(sleeping_count/2)}', (50, frame.shape[0] - 20),
                        colorR=(255, 0, 0), colorT=(255, 255, 255), scale=2, thickness=2)
 
     return frame, mode_state, math.ceil(sleeping_count)
