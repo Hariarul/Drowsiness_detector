@@ -28,11 +28,7 @@ st.sidebar.header("Upload Input")
 file = st.sidebar.file_uploader("Upload an Image/Video", type=["jpg", "jpeg", "png", "mp4", "avi", "mov"], accept_multiple_files=False)
 
 # Pre-trained model paths
-<<<<<<< HEAD
 detection_model_path = "Drowsiness_detector.pt" 
-=======
-detection_model_path = "Drowsiness_detector.pt"  
->>>>>>> 9efe8f40c1c98ce0f2831003ef8e23d89eaf1ba9
 age_model_path = "age_detector.pt"  
 
 # Load models
