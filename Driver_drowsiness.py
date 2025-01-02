@@ -19,7 +19,7 @@ st.set_page_config(
 # Title
 st.title("🚗 Drowsiness & Age Detection System")
 st.markdown("""
-This application detects **drowsiness** of individuals in videos or images based on eye closure.
+This application detects **drowsiness** of individuals in videos or images.
 Upload a file to get started! 💡
 """)
 
@@ -92,7 +92,7 @@ if file is not None:
     if file_extension in ["jpg", "jpeg", "png"]:
         img = cv2.imread(tfile.name)
         processed_img, mode_state, sleeping_count = process_frame(img, detection_model, age_model, frame_count=1)
-        st.image(processed_img, caption="Processed Image", use_column_width=True)
+        st.image(processed_img, caption="Processed Image", use_container_width=True)
         st.success(f"Mode State: {mode_state}")
         st.success(f"People Sleeping: {sleeping_count}")
 
@@ -108,7 +108,7 @@ if file is not None:
             frame = cv2.resize(frame, (640, 480))
             frame_count += 1
             processed_frame, mode_state, sleeping_count = process_frame(frame, detection_model, age_model, frame_count)
-            stframe.image(processed_frame, channels="BGR", use_column_width=True)
+            stframe.image(processed_frame, channels="BGR", use_container_width=True)
 
         cap.release()
 
